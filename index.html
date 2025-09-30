@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 2</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tarefas</title>
 
-    <h1>Minha Lista de Tarefas</h1>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-    <input type="text" id="nova-tarefa-input" placeholder="Digite uma tarefa..."> <!-- Input com texto-->
-    <button id="adicionar-tarefa-btn">Adicionar Tarefa</button>  <!-- Botão-->
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body class="container">
 
-    <button id="limpar-lista-btn">Limpar lista</button>
+    <div class="card p-4 shadow-lg" style="max-width: 400px; background: rgba(255,255,255,0.9); border-radius: 15px;">
+      <h1>Minha Lista de Tarefas</h1>
 
-    <ul id="lista-de-tarefas"></ul>  <!--Lista vazia-->
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="nova-tarefa-input"
+          placeholder="Digite uma tarefa..."
+        />
 
-    <script src="../JS/projeto2.js"></script>
+        <button class="btn btn-primary" id="adicionar-tarefa-btn">
+          Adicionar Tarefa
+        </button>
+      </div>
 
-</body>
+      <button class="btn btn-sm btn-danger float-end" id="limpar-lista-btn">
+        Limpar lista
+      </button>
+
+      <ul class="List-group mt-5" id="lista-de-tarefas"></ul>
+      <!--Lista vazia-->
+    </div>
+
+    <script src="config.js"></script>
+  </body>
 </html>
